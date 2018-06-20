@@ -102,10 +102,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -x /usr/bin/mint-fortune ]; then
-     /usr/bin/mint-fortune
-fi
+#if [ -x /usr/bin/mint-fortune ]; then
+#     /usr/bin/mint-fortune
+#fi
 
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
+#if [ -f ~/.bash_profile ]; then
+#    . ~/.bash_profile
+#fi
