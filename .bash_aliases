@@ -15,6 +15,7 @@ alias l='ls -CF'
 alias cls=clear
 alias xv=xviewer
 alias ..='cd ..'
+alias release='cat /usr/lib/os-release'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
