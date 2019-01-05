@@ -1,0 +1,2 @@
+sudo apt install vim-gtk
+git clone https://github.com/ga-hegsvold/.vim.git ~/.vim && ln -s ~/.vim/.vimrc ~/.vimrc
