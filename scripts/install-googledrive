@@ -1,15 +1,17 @@
-echo 'Install instructions: http://xmodulo.com/mount-google-drive-linux.html'
-echo 'Install google-drive-ocamlfuse'
+echo '-> Mount Google Drive with google-drive-ocamlfuse'
+echo '--> Install instructions: http://xmodulo.com/mount-google-drive-linux.html'
+echo '--> Install google-drive-ocamlfuse'
 sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
 sudo apt-get install google-drive-ocamlfuse
 
-echo 'Mount Google Drive with google-drive-ocamlfuse'
+echo '--> Create fuse group'
+sudo groupadd fuse
+echo '--> Add your user to the fuse group'
 sudo usermod -a -G fuse gah
-exec su -l $USER
 
-#google-drive-ocamlfuse
+#exec su -l $USER
 
-echo 'Create a mount point and mount Google Drive'
-#mkdir ~/googledrive
-#google-drive-ocamlfuse ~/googledrive
+echo '--> Create a mount point and mount Google Drive'
+echo 'mkdir ~/googledrive'
+echo 'google-drive-ocamlfuse ~/googledrive'
