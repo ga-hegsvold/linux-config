@@ -13,9 +13,9 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(grep "UBUNTU_CODENAME" /etc/os-release | awk '{split($0,a,"="); print a[2]}') \
    stable"
-echo '=> Install Docker CE'
+echo '=> Install Docker'
 sudo apt update
-sudo apt install docker-ce
+sudo apt install docker.io
 echo '==> Create docker group'
 sudo groupadd docker
 echo '==> Add your user to the docker group'
