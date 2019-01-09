@@ -1,0 +1,15 @@
+# TODO: Test!
+# https://www.addictivetips.com/ubuntu-linux-tips/access-microsoft-onedrive-on-linux/
+ONEDRIVE_INSTALL_PATH=~/git-repos/onedrive-d
+echo '- Cloning git repo'
+echo git clone https://github.com/xybu92/onedrive-d.git $ONEDRIVE_INSTALL_PATH
+echo '- Creating local sync folder'
+echo mkdir ~/OneDrive
+echo '- Installing onedrive-d'
+echo $ONEDRIVE_INSTALL_PATH/install.sh
+echo '- Configuring onedrive'
+echo onedrive-perf
+echo '- Starting onedrive-d as background process. Terminal can now be closed.'
+echo onedrive-d start
+echo '- Stop syncing with the following cmd:'
+echo 'onedrive-d stop'
