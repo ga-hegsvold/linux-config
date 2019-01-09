@@ -1,5 +1,10 @@
-sudo apt-get install xsltproc
-sudo apt-get install fop docbook-xsl-doc-pdf
-sudo apt-get install libservlet2.4-java
-sudo apt-get install docbook-defguide
-sudo apt-get install docbook-xsl
+# http://pandoc.org/getting-started.html
+sudo apt install pandoc
+sudo apt install texlive
+
+#sudo apt install xsltproc
+#sudo apt install fop docbook-xsl-doc-pdf
+##sudo apt install libservlet2.4-java
+#sudo apt install docbook
+#sudo apt install docbook-defguide
+#sudo apt install docbook-xsl

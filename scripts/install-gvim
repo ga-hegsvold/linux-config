@@ -1,2 +1,4 @@
+echo '- Installing gvim'
 sudo apt install vim-gtk
+echo '- Setting up vim configs'
 git clone https://github.com/ga-hegsvold/.vim.git ~/.vim && ln -s ~/.vim/.vimrc ~/.vimrc

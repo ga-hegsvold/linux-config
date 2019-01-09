@@ -1,27 +1,27 @@
-echo '=> Set up the docker repository'
-echo '==> update apt package index'
+echo '- Setting up the docker repository'
+echo '-- Updating apt package index'
 sudo apt update
-echo '==> Install packages to allow apt to use a repository over HTTPS'
+echo '-- Installing packages to allow apt to use a repository over HTTPS'
 sudo apt install \
     apt-transport-https \
     ca-certificates \
     curl \
     software-properties-common
-echo '==> Add Docker’s official GPG key'
+echo '-- Adding Docker’s official GPG key'
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(grep "UBUNTU_CODENAME" /etc/os-release | awk '{split($0,a,"="); print a[2]}') \
    stable"
-echo '=> Install Docker'
+echo '- Installing Docker'
 sudo apt update
 sudo apt install docker.io
-echo '==> Create docker group'
+echo '-- Creating docker group'
 sudo groupadd docker
-echo '==> Add your user to the docker group'
+echo '-- Add your user to the docker group'
 sudo usermod -aG docker $USER
-echo '=> Configure docker to start on boot'
+echo '- Configuring docker to start on boot'
 sudo systemctl enable docker
-echo '=> IMPORTANT: Log out and in again for group membership to take effect'
-echo '=> Then test docker with: docker run hello-world'
-echo '=> More info at https://docs.docker.com/install/linux/linux-postinstall/'
+echo ' IMPORTANT: Log out and in again for group membership to take effect'
+echo ' Then test docker with: docker run hello-world'
+echo ' More info at https://docs.docker.com/install/linux/linux-postinstall/'

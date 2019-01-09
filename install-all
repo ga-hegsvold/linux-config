@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for file in ./scripts/*
+do
+    if [[ -f $file ]]; then
+		echo
+		echo "Running $file ..."
+		$file
+		echo "Done running $file"
+    fi
+done
