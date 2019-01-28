@@ -1,0 +1,2 @@
+echo cp ../.config/krusaderrc ~/.config/
+cp ../.config/krusaderrc ~/.config/
