@@ -102,6 +102,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/gah/opt/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/home/gah/opt/gcloud/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/gah/opt/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/home/gah/opt/gcloud/google-cloud-sdk/completion.bash.inc'; fi
+
 # Show git branch in command prompt
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
