@@ -16,3 +16,6 @@ sudo usermod -a -G fuse $USER
 echo '-- Creating mount point and mounting Google Drive'
 echo 'mkdir ~/googledrive'
 echo 'google-drive-ocamlfuse ~/googledrive'
+
+echo 'unmount:'
+echo 'fusermount -u ~/googledrive'
