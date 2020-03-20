@@ -17,7 +17,7 @@ alias xv=xviewer
 alias ..='cd ..'
 alias release='cat /usr/lib/os-release'
 
-alias sesam='sesam -version && sesam'
+alias sesam='date && sesam -version && sesam'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
