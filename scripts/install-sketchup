@@ -1,0 +1,5 @@
+echo '- Installing Sketchup 2017'
+echo 'https://www.scivision.dev/using-sketchup-in-linux-wine/'
+wget https://www.sketchup.com/sketchup/2017/en/sketchupmake-2017-2-2555-90782-en-x64-exe
+WINEPREFIX=~/.wine_sketchup winecfg
+WINEPREFIX=~/.wine_sketchup wine sketchupmake-2017-2-2555-90782-en-x64-exe
