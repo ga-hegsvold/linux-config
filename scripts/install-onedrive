@@ -1,7 +1,9 @@
-echo '- Install onedrive'
-sudo apt update
-sudo apt install onedrive
+echo '- Linux Mint 20.x:'
+echo 'https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md'
+echo '- Linux Mint 21.x:'
 echo 'Instructions: https://linuxhint.com/install-and-use-onedrive-on-linux-mint/'
+echo 'sudo apt update'
+echo 'sudo apt install onedrive'
 echo '- Configure onedrive'
 echo 'onedrive'
 echo '- Test sync'
