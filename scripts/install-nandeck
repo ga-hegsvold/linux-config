@@ -1,20 +1,25 @@
 echo 'Install wine:'
-
 sudo apt install wine
 
 echo 'Prepare a win32 prefix:'
-
 rm -r -f ~/.wine
 WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot
 
 echo 'Install winetricks:'
-
 sudo apt install winetricks
 
 echo 'Install Explorer 8:'
-
 winetricks ie8
+winetricks ie8_kb2936068
 
 echo 'Install Windows fonts:'
-
 winetricks corefonts
+
+echo 'Install mono-complete'
+sudo apt install mono-complete
+
+echo 'https://community.linuxmint.com/software/view/winbind'
+sudo apt install winbind
+
+echo 'Allow Wine opening raw sockets'
+sudo setcap cap_net_raw+epi /usr/bin/wine-stable
