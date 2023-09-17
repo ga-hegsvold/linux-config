@@ -1,25 +1,37 @@
-echo 'Install wine:'
-sudo apt install wine
+echo 'Installing Wine...'
+echo ' https://linux.how2shout.com/how-to-install-winehq-on-ubuntu-22-04-lts-jammy/'
+echo ' Enable 32-bit architecture'
+sudo dpkg --add-architecture i386
+echo ' Add WineHQ repository on Ubuntu 22.04'
+echo '  Download using wget'
+sudo apt install wget
+wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+echo '  Move it to source directory'
+sudo mv winehq-jammy.sources /etc/apt/sources.list.d/
+echo ' Download and add the repository key'
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+echo ' Run APT update'
+sudo apt update
+echo ' Install Wine on Ubuntu 22.04 LTS'
+sudo apt install --install-recommends winehq-stable
+wine --version
+echo ' Setup Wine'
+export WINEARCH=win32
+export WINEPREFIX=~/.wine32
+winecfg
+echo ' To install any Windows App, run:'
+echo 'wine setupfilename.exe'
 
-echo 'Prepare a win32 prefix:'
-rm -r -f ~/.wine
-WINEARCH=win32 WINEPREFIX=~/.wine wine wineboot
-
-echo 'Install winetricks:'
+echo ' Install winetricks:'
 sudo apt install winetricks
 
-echo 'Install Explorer 8:'
-winetricks ie8
-winetricks ie8_kb2936068
+echo ' Install Explorer 8:'
+echo 'winetricks ie8'
+echo 'winetricks ie8_kb2936068'
 
-echo 'Install Windows fonts:'
-winetricks corefonts
+echo ' Install Windows fonts:'
+echo 'winetricks corefonts'
 
-echo 'Install mono-complete'
-sudo apt install mono-complete
-
-echo 'https://community.linuxmint.com/software/view/winbind'
-sudo apt install winbind
-
-echo 'Allow Wine opening raw sockets'
-sudo setcap cap_net_raw+epi /usr/bin/wine-stable
+echo ' Allow Wine opening raw sockets'
+echo 'sudo setcap cap_net_raw+epi /usr/bin/wine-stable'
