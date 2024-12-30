@@ -25,3 +25,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # switch python3 version (python3.6 needed for Mint 19)
 alias set-python3='sudo update-alternatives --config python3'
+
+alias pdf2png='pdftoppm -png '
