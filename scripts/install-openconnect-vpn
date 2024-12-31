@@ -1,0 +1,8 @@
+echo 'https://www.baeldung.com/linux/cisco-anyconnect-vpn-client'
+sudo apt install openconnect
+echo 'Verify install'
+openconnect --version
+echo 'Integrate Network manager and OpenConnect tool'
+sudo apt install network-manager-openconnect-gnome
+echo 'Restart Network manager to save changes'
+sudo systemctl restart NetworkManager
