@@ -13,6 +13,9 @@ sudo usermod -a -G fuse $USER
 
 #exec su -l $USER
 
+echo 'Info: https://github.com/astrada/google-drive-ocamlfuse/wiki/Authorization'
+echo 'GoogleDrive OAuth2 cred: https://console.cloud.google.com/apis/credentials?inv=1&invt=Ablspg&project=eco-tenure-139809'
+
 echo '-- Creating mount point and mounting Google Drive'
 echo 'mkdir ~/googledrive'
 echo 'google-drive-ocamlfuse ~/googledrive'
