@@ -3,8 +3,6 @@ echo 'https://www.citrix.com/downloads/workspace-app/legacy-workspace-app-for-li
 echo ''
 echo 'Version 22.12.0.12 works on Linux Mint 21 & 22'
 echo ''
-echo 'No need for the cert config below for Mint 22'
-echo ''
 echo 'Configure certs'
 echo ' $ sudo mv /opt/Citrix/ICAClient/keystore/cacerts /opt/Citrix/ICAClient/keystore/cacerts.bak'
 echo ' $ sudo ln -s /etc/ssl/certs/ /opt/Citrix/ICAClient/keystore/cacerts'
