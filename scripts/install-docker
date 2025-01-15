@@ -23,6 +23,8 @@ echo '-- Add your user to the docker group'
 sudo usermod -aG docker $USER
 echo '- Configuring docker to start on boot'
 sudo systemctl enable docker
-echo ' IMPORTANT: Log out and in again for group membership to take effect'
+echo '-- change your users group ID to docker (to avoid having to log out and log in again)'
+echo ' newgrp docker'
+echo '-- or log out and in again for group membership to take effect'
 echo ' Then test docker with: docker run hello-world'
 echo ' More info at https://docs.docker.com/install/linux/linux-postinstall/'
